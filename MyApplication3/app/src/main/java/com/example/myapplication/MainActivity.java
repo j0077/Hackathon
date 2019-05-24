@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.myapplication.adapters.RestaurantAdapter;
 import com.example.myapplication.models.RestaurantModel;
@@ -17,6 +20,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 public class MainActivity extends AppCompatActivity {
 
+    RestaurantAdapter restaurantAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,26 +30,60 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final SearchView searchView = findViewById(R.id.search_view);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                search(s);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
+
         RecyclerView restaurantsView = findViewById(R.id.rv_restaurant);
         restaurantsView.setLayoutManager(new LinearLayoutManager(this));
 
-        final RestaurantAdapter adapter = new RestaurantAdapter();
-        restaurantsView.setAdapter(adapter);
+        restaurantAdapter = new RestaurantAdapter();
+        restaurantsView.setAdapter(restaurantAdapter);
+
+        fetchAll();
+    }
+
+    public void search(final String text) {
+        restaurantAdapter.clear();
 
         FirebaseFirestore store = FirebaseFirestore.getInstance();
-        store.collection("restaurants").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        store.collection("restaurants")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for (DocumentSnapshot document: task.getResult().getDocuments()) {
-                    RestaurantModel model = new RestaurantModel();
-                    model.name = (String)document.get("name");
-                    model.address = (String)document.get("address");
-                    model.imageUri = (String)document.get("imageUri");
-                    model.rateLocal = (long)document.get("rateLocal");
-                    model.rateTraveler = (long)document.get("rateTraveler");
-                    model.numOfReviews = (long)document.get("numOfReviews");
+                    RestaurantModel model = new RestaurantModel(document);
+                    if (model.name.contains(text) || model.address.contains(text)) {
+                        restaurantAdapter.addItem(model);
+                    }
+                }
+            }
+        });
+    }
 
-                    adapter.addItem(model);
+    public void fetchAll() {
+        restaurantAdapter.clear();
+
+        FirebaseFirestore store = FirebaseFirestore.getInstance();
+        store.collection("restaurants")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for (DocumentSnapshot document: task.getResult().getDocuments()) {
+                    RestaurantModel model = new RestaurantModel(document);
+                    restaurantAdapter.addItem(model);
                 }
             }
         });
