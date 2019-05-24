@@ -1,26 +1,31 @@
 package com.example.myapplication;
 
-import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class InfoActivity extends AppCompatActivity {
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        Intent intent = getIntent();
-        String restaurantName = intent.getExtras().getString("rName");
+        //식당 이름 받아오기
+        String restaurantName = "rName";
         TextView rNameText = (TextView)findViewById(R.id.idrName);
         rNameText.setText(restaurantName);
 
-        //평균 평점 계산
+        //평점 계산
         double traveler_score = 0.0;
         double locals_score = 0.0;
 
@@ -31,16 +36,21 @@ public class InfoActivity extends AppCompatActivity {
         TextView lScoreText = (TextView)findViewById(R.id.lScore);
         lScoreText.setText(l_Score);
 
-        //사진 받아오기
-//        LinearLayout layout = (LinearLayout) layout.findViewById(R.id.linearLayout);
-//        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT);
-//
-//
-//        ImageView iv = new ImageView(this);
-//        iv.setImageResource(R.drawable.image);
-////        iv.setLayoutParams(textParams);
-//
-//        layout.addView(iv);
+        //recyclerview 설정
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+
+        //이미지, 리뷰아이디 받아오기
+        ArrayList<ReviewRecyclerItem> items = new ArrayList<>();
+        for(ReviewRecyclerItem i : items){
+//            items.add(new ReviewRecyclerItem( , ));
+        }
+
+        mLayoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        mAdapter = new MyAdapter(items, getApplicationContext());
+        mRecyclerView.setAdapter(mAdapter);
     }
 
 }
