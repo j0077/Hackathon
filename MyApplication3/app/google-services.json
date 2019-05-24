@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "515674153576",
+    "firebase_url": "https://kmucs-hackathon.firebaseio.com",
+    "project_id": "kmucs-hackathon",
+    "storage_bucket": "kmucs-hackathon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515674153576:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515674153576-psp8kte00luo44f3md81srna7of7790q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqIMJ-rt68NjgazQS3tmQtJ8SW2v7R27I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515674153576-psp8kte00luo44f3md81srna7of7790q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
