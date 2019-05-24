@@ -8,8 +8,8 @@ public class RestaurantModel {
     public String address;
     public String imageUri;
     public long numOfReviews;
-    public long rateLocal;
-    public long rateTraveler;
+    public double rateLocal;
+    public double rateTraveler;
 
     public RestaurantModel() {
     }
@@ -19,8 +19,8 @@ public class RestaurantModel {
         name = (String)document.get("name");
         address = (String)document.get("address");
         imageUri = (String)document.get("imageUri");
-        rateLocal = (long)document.get("rateLocal");
-        rateTraveler = (long)document.get("rateTraveler");
+        rateLocal = (double)document.get("rateLocal");
+        rateTraveler = (double)document.get("rateTraveler");
         numOfReviews = (long)document.get("numOfReviews");
     }
 }
