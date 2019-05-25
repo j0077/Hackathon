@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -11,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.myapplication.adapters.ClickListener;
@@ -22,8 +24,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
 
 public class InfoActivity extends AppCompatActivity {
 
@@ -41,10 +41,20 @@ public class InfoActivity extends AppCompatActivity {
         actionBar.setDisplayShowTitleEnabled(false);
 
         Intent intent = getIntent();
-        String id = intent.getStringExtra("id");
+        final String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
         double rateLocal = intent.getDoubleExtra("rateLocal", 4.0);
         double rateTraveler = intent.getDoubleExtra("rateTraveler", 3.5);
+
+        FloatingActionButton button = findViewById(R.id.btn_write);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent writeIntent = new Intent(getApplicationContext(), WriteActivity.class);
+                writeIntent.putExtra("id", id);
+                startActivity(writeIntent);
+            }
+        });
 
         TextView titleView = findViewById(R.id.info_title);
         TextView rateLocalView = findViewById(R.id.local_rate);

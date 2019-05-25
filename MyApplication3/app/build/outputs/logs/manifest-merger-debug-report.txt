@@ -1,18 +1,21 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/raye/.gradle/caches/transforms-2/files-2.1/b16cc35d8a1921fc5d854b002a60f098/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/f960cf4dccbdd040808c3cdb1c3890a9/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:17:1-38:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/5441ff51200675a270a45ccc588fc509/AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.support:design:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/034c2844767019ef1abd94a463b601c5/AndroidManifest.xml:17:1-24:12
+MERGED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:2:1-17:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/c2a4ab0a7d61dae9152a89db32b4106c/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/raye/.gradle/caches/transforms-2/files-2.1/491e3b6b600f8f840d24f2aa2db323fa/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/c9066674e784b9be773479e5b0b04ea0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/3f5c163db3dc2e73e77c1f9f77c4baf6/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/6a993326dd3feff9a392f01bb2f1c373/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/088cf49d7c8ac1118237452ed1ad796d/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/8fb1d6b2acab901a0e2cbea466ee9142/AndroidManifest.xml:17:1-59:12
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/747da016ff7f0edfbd6bfa7113d7e540/AndroidManifest.xml:2:1-10:12
@@ -62,20 +65,20 @@ MERGED from [com.android.support:interpolator:28.0.0] /Users/raye/.gradle/caches
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/1cc6af45fce9dc35bad2d2e740bbbe2c/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/2317aade1ae8ab876a01e2acdef97427/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/bc75ad65c25aa76eed336e3e2dc9679c/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:2:11-69
@@ -101,18 +104,34 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:6:5-79
 	android:name
 		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.CAMERA
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:7:22-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:8:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:9:22-78
 application
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:8:5-29:19
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:11:5-35:19
 MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/raye/.gradle/caches/transforms-2/files-2.1/b16cc35d8a1921fc5d854b002a60f098/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-core:16.0.9] /Users/raye/.gradle/caches/transforms-2/files-2.1/b16cc35d8a1921fc5d854b002a60f098/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/f960cf4dccbdd040808c3cdb1c3890a9/AndroidManifest.xml:16:5-22:19
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/f960cf4dccbdd040808c3cdb1c3890a9/AndroidManifest.xml:16:5-22:19
 MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:29:5-35:19
 MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:29:5-35:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:22:5-36:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:22:5-36:19
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/5441ff51200675a270a45ccc588fc509/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/5441ff51200675a270a45ccc588fc509/AndroidManifest.xml:10:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/034c2844767019ef1abd94a463b601c5/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/034c2844767019ef1abd94a463b601c5/AndroidManifest.xml:22:5-20
+MERGED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:9:5-15:19
+MERGED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:9:5-15:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/raye/.gradle/caches/transforms-2/files-2.1/491e3b6b600f8f840d24f2aa2db323fa/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/raye/.gradle/caches/transforms-2/files-2.1/491e3b6b600f8f840d24f2aa2db323fa/AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/c9066674e784b9be773479e5b0b04ea0/AndroidManifest.xml:7:5-20
@@ -162,47 +181,53 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/raye/.gradle
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/6d242c5e4e9874e78df27206dde11468/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:12:9-54
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:14:9-40
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:17:9-40
 activity#com.example.myapplication.ReviewActivity
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:15:9-61
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:18:9-61
 	android:name
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:15:19-49
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:18:19-49
 activity#com.example.myapplication.SplashActivity
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:16:9-22:20
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:16:19-49
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:19:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:17:13-21:29
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:23:27-74
 activity#com.example.myapplication.MainActivity
-ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:23:9-25:47
-	android:theme
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:25:13-44
-	android:name
-		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:24:13-41
-activity#com.example.myapplication.InfoActivity
 ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:26:9-28:47
 	android:theme
 		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:28:13-44
 	android:name
 		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:27:13-41
+activity#com.example.myapplication.InfoActivity
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:29:9-31:47
+	android:theme
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:31:13-44
+	android:name
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:30:13-41
+activity#com.example.myapplication.WriteActivity
+ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:32:9-34:47
+	android:theme
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:34:13-44
+	android:name
+		ADDED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml:33:13-42
 uses-sdk
 INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/raye/Desktop/Hackathon/MyApplication3/app/src/main/AndroidManifest.xml
@@ -213,10 +238,14 @@ MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/raye/.gradle/
 MERGED from [com.google.firebase:firebase-firestore:18.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/f960cf4dccbdd040808c3cdb1c3890a9/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/5441ff51200675a270a45ccc588fc509/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/5441ff51200675a270a45ccc588fc509/AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.support:design:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/034c2844767019ef1abd94a463b601c5/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/034c2844767019ef1abd94a463b601c5/AndroidManifest.xml:20:5-44
+MERGED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:5:5-7:41
+MERGED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/c2a4ab0a7d61dae9152a89db32b4106c/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/c2a4ab0a7d61dae9152a89db32b4106c/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/raye/.gradle/caches/transforms-2/files-2.1/491e3b6b600f8f840d24f2aa2db323fa/AndroidManifest.xml:5:5-7:41
@@ -225,6 +254,8 @@ MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/raye/.gradle/
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/c9066674e784b9be773479e5b0b04ea0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/3f5c163db3dc2e73e77c1f9f77c4baf6/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/3f5c163db3dc2e73e77c1f9f77c4baf6/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/6a993326dd3feff9a392f01bb2f1c373/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/raye/.gradle/caches/transforms-2/files-2.1/6a993326dd3feff9a392f01bb2f1c373/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/088cf49d7c8ac1118237452ed1ad796d/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/088cf49d7c8ac1118237452ed1ad796d/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/8fb1d6b2acab901a0e2cbea466ee9142/AndroidManifest.xml:20:5-44
@@ -357,6 +388,8 @@ service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-firestore:18.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/f960cf4dccbdd040808c3cdb1c3890a9/AndroidManifest.xml:17:9-21:19
 MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:30:9-34:19
 MERGED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:31:9-35:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:31:9-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/088cf49d7c8ac1118237452ed1ad796d/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/088cf49d7c8ac1118237452ed1ad796d/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/8fb1d6b2acab901a0e2cbea466ee9142/AndroidManifest.xml:29:9-35:19
@@ -377,6 +410,36 @@ ADDED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/cac
 		ADDED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:33:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-storage:16.1.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/aa40c822a83255e8a3585bf7005ae46c/AndroidManifest.xml:32:17-107
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:23:9-29:75
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:25:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:27:13-48
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:26:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:28:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:29:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:24:13-85
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:16.0.4] /Users/raye/.gradle/caches/transforms-2/files-2.1/dfb98c12c08e0444d8e591ed46c2d47b/AndroidManifest.xml:33:17-109
+activity#com.gun0912.tedpermission.TedPermissionActivity
+ADDED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:10:9-14:67
+	android:screenOrientation
+		ADDED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:13:13-52
+	android:configChanges
+		ADDED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:12:13-144
+	android:theme
+		ADDED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:14:13-64
+	android:name
+		ADDED from [gun0912.ted:tedpermission:2.2.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/0756d9df7b9636ed00d91172a86169d9/AndroidManifest.xml:11:13-75
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] /Users/raye/.gradle/caches/transforms-2/files-2.1/088cf49d7c8ac1118237452ed1ad796d/AndroidManifest.xml:24:5-68
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /Users/raye/.gradle/caches/transforms-2/files-2.1/8fb1d6b2acab901a0e2cbea466ee9142/AndroidManifest.xml:24:5-68
