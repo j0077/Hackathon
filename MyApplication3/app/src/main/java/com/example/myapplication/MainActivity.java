@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,9 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Toast;
 
+import com.example.myapplication.adapters.ClickListener;
 import com.example.myapplication.adapters.RestaurantAdapter;
 import com.example.myapplication.models.RestaurantModel;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -47,7 +47,17 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView restaurantsView = findViewById(R.id.rv_restaurant);
         restaurantsView.setLayoutManager(new LinearLayoutManager(this));
 
-        restaurantAdapter = new RestaurantAdapter();
+        restaurantAdapter = new RestaurantAdapter(new ClickListener<RestaurantModel>() {
+            @Override
+            public void onClick(RestaurantModel restaurantModel) {
+                Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+                intent.putExtra("id", restaurantModel.id);
+                intent.putExtra("name", restaurantModel.name);
+                intent.putExtra("rateLocal", restaurantModel.rateLocal);
+                intent.putExtra("rateTraveler", restaurantModel.rateTraveler);
+                startActivity(intent);
+            }
+        });
         restaurantsView.setAdapter(restaurantAdapter);
 
         fetchAll();
@@ -57,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         restaurantAdapter.clear();
 
         FirebaseFirestore store = FirebaseFirestore.getInstance();
-        store.collection("restaurants")
+        store.collection("restaurants-new")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -76,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         restaurantAdapter.clear();
 
         FirebaseFirestore store = FirebaseFirestore.getInstance();
-        store.collection("restaurants")
+        store.collection("restaurants-new")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override

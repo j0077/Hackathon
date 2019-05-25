@@ -1,82 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableLayout
-        android:id="@+id/toptable"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/info_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="8dp"
+        android:text="음식집 이름"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
+    <TextView
+        android:id="@+id/local_rate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="현지인 평점"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/info_title"
+        app:layout_constraintStart_toEndOf="@+id/info_title"
+        app:layout_constraintTop_toTopOf="@+id/info_title" />
 
-        <TableRow>
+    <TextView
+        android:id="@+id/local_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/local_rate_label"
+        app:layout_constraintStart_toEndOf="@+id/local_rate_label"
+        app:layout_constraintTop_toTopOf="@+id/local_rate_label"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:id="@+id/idrName"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:gravity="center_horizontal"
-                android:text="Restaurant Name"
-                android:textColor="#5d5c5c"
-                android:textSize="20dp" />
+    <TextView
+        android:id="@+id/traveler_rate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="여행자 평점"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/local_rate"
+        app:layout_constraintStart_toEndOf="@+id/local_rate"
+        app:layout_constraintTop_toTopOf="@+id/local_rate" />
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="여행자 평점"
-                android:textColor="#5d5c5c"
-                android:textSize="10dp" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="현지인 평점"
-                android:textColor="#5d5c5c"
-                android:textSize="10dp" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView android:text="" />
-
-            <TextView
-                android:id="@+id/tScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="score1"
-                android:textColor="#5d5c5c"
-                android:textSize="10dp" />
-
-            <TextView
-                android:id="@+id/lScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="score2"
-                android:textColor="#5d5c5c"
-                android:textSize="10dp" />
-        </TableRow>
-
-    </TableLayout>
+    <TextView
+        android:id="@+id/traveler_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/traveler_rate_label"
+        app:layout_constraintStart_toEndOf="@+id/traveler_rate_label"
+        app:layout_constraintTop_toTopOf="@+id/traveler_rate_label" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/rv_reviews"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toptable"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
 
 </android.support.constraint.ConstraintLayout>

@@ -16,11 +16,25 @@ public class RestaurantModel {
 
     public RestaurantModel(DocumentSnapshot document) {
         id = document.getId();
-        name = (String)document.get("name");
-        address = (String)document.get("address");
-        imageUri = (String)document.get("imageUri");
-        rateLocal = (double)document.get("rateLocal");
-        rateTraveler = (double)document.get("rateTraveler");
-        numOfReviews = (long)document.get("numOfReviews");
+
+        if (document.contains("name")) {
+            name = (String)document.get("name");
+        }
+        if (document.contains("address")) {
+            address = (String)document.get("address");
+        }
+        if (document.contains("imageUri")) {
+            imageUri = (String)document.get("imageUri");
+        }
+        if (document.contains("rateLocal")) {
+            rateLocal = (double)document.get("rateLocal");
+        }
+        if (document.contains("rateTraveler")) {
+            rateTraveler = (double)document.get("rateTraveler");
+        }
+        if (document.contains("numofReviews")) {
+            numOfReviews = (long)document.get("numofReviews");
+        }
+
     }
 }

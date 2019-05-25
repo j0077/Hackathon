@@ -1,56 +1,88 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
+
+import com.example.myapplication.adapters.ClickListener;
+import com.example.myapplication.adapters.ReviewAdapter;
+import com.example.myapplication.models.RestaurantModel;
+import com.example.myapplication.models.ReviewModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
 public class InfoActivity extends AppCompatActivity {
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+
+    ReviewAdapter reviewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        //식당 이름 받아오기
-        String restaurantName = "rName";
-        TextView rNameText = (TextView)findViewById(R.id.idrName);
-        rNameText.setText(restaurantName);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        //평점 계산
-        double traveler_score = 0.0;
-        double locals_score = 0.0;
+        final ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
 
-        String t_Score = new Double(traveler_score).toString();
-        String l_Score = new Double(locals_score).toString();
-        TextView tScoreText = (TextView)findViewById(R.id.tScore);
-        tScoreText.setText(t_Score);
-        TextView lScoreText = (TextView)findViewById(R.id.lScore);
-        lScoreText.setText(l_Score);
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("id");
+        String name = intent.getStringExtra("name");
+        double rateLocal = intent.getDoubleExtra("rateLocal", 4.0);
+        double rateTraveler = intent.getDoubleExtra("rateTraveler", 3.5);
 
-        //recyclerview 설정
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mRecyclerView.setHasFixedSize(true);
+        TextView titleView = findViewById(R.id.info_title);
+        TextView rateLocalView = findViewById(R.id.local_rate);
+        TextView rateTravelerView = findViewById(R.id.traveler_rate);
 
-        //이미지, 리뷰아이디 받아오기
-        ArrayList<ReviewRecyclerItem> items = new ArrayList<>();
-        for(ReviewRecyclerItem i : items){
-//            items.add(new ReviewRecyclerItem( , ));
-        }
+        titleView.setText(name);
+        rateLocalView.setText(String.format("%.1f", rateLocal));
+        rateTravelerView.setText(String.format("%.1f", rateTraveler));
 
-        mLayoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(mLayoutManager);
+        reviewAdapter = new ReviewAdapter(new ClickListener<ReviewModel>() {
+            @Override
+            public void onClick(ReviewModel reviewModel) {
+                Intent intent = new Intent(getApplicationContext(), ReviewActivity.class);
+                intent.putExtra("id", reviewModel.id);
+                intent.putExtra("name", reviewModel.name);
+                intent.putExtra("text", reviewModel.text);
+                intent.putExtra("rate", reviewModel.rate);
+                intent.putExtra("vip", reviewModel.vip);
+                intent.putExtra("images", reviewModel.images);
+                startActivity(intent);
+            }
+        });
 
-        mAdapter = new MyAdapter(items, getApplicationContext());
-        mRecyclerView.setAdapter(mAdapter);
+        RecyclerView reviewList = findViewById(R.id.rv_reviews);
+        reviewList.setAdapter(reviewAdapter);
+        reviewList.setLayoutManager(new GridLayoutManager(this, 4));
+
+        FirebaseFirestore store = FirebaseFirestore.getInstance();
+        store.collection("reviews-new").whereEqualTo("restarunantId", id).get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        for (DocumentSnapshot document: task.getResult().getDocuments()) {
+                            ReviewModel reviewModel = new ReviewModel(document);
+                            reviewAdapter.addItem(reviewModel);
+                        }
+                    }
+                });
     }
 
 }

@@ -2,7 +2,6 @@ package com.example.myapplication.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +13,9 @@ import com.example.myapplication.R;
 import com.example.myapplication.models.RestaurantModel;
 
 public class RestaurantAdapter extends BaseAdapter<RestaurantModel, RestaurantAdapter.ViewHolder> {
-    View.OnClickListener clickListener;
+    ClickListener<RestaurantModel> clickListener;
 
-    public RestaurantAdapter(View.OnClickListener clickListener) {
+    public RestaurantAdapter(ClickListener clickListener) {
         super();
         this.clickListener = clickListener;
     }
@@ -48,9 +47,9 @@ public class RestaurantAdapter extends BaseAdapter<RestaurantModel, RestaurantAd
         TextView localRateView;
         TextView travelerRateView;
 
-        View.OnClickListener clickListener;
+        ClickListener<RestaurantModel> clickListener;
 
-        public ViewHolder(View view, View.OnClickListener clickListener) {
+        public ViewHolder(View view, ClickListener clickListener) {
             super(view);
             root = view.findViewById(R.id.restaurant_card_root);
             imageView = view.findViewById(R.id.restaurant_card_image_view);
@@ -65,8 +64,13 @@ public class RestaurantAdapter extends BaseAdapter<RestaurantModel, RestaurantAd
         }
 
         @Override
-        public void bind(RestaurantModel model) {
-            root.setOnClickListener(clickListener);
+        public void bind(final RestaurantModel model) {
+            root.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    clickListener.onClick(model);
+                }
+            });
 
             titleView.setText(model.name);
             addressView.setText(model.address);
