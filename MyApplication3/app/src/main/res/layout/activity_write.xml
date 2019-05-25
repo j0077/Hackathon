@@ -1,0 +1,99 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/uploadButton1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/ic_file_upload_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+
+    <Button
+        android:id="@+id/uploadButton2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/ic_file_upload_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+
+    <Button
+        android:id="@+id/uploadButton3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/ic_file_upload_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="246dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:isIndicator="false"
+        android:max="6"
+        android:numStars="4"
+        android:rating="3"
+        android:stepSize="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadButton1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="357dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="5"
+        android:background="@color/colorAccent"
+        android:text="이곳은 리뷰 정보 타이핑하는 곳"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:text="입력완료"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <android.support.v7.widget.Toolbar
+        android:layout_constraintStart_toStartOf="parent"
+        android:layout_constraintTop_toBottomOf="parent"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_constraintStart_toStartOf="parent"
+        android:text="리뷰쓰기"
+        android:textColor=""
+        android:textSize="#000000"
+        />
+
+</android.support.constraint.ConstraintLayout>
