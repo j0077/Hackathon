@@ -70,7 +70,7 @@ public class WriteActivity extends AppCompatActivity {
                     }
                 })
                 .setDeniedMessage("사진 추가를 위해서 사진 읽기와 카메라 권한이 필요합니다")
-                .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
+                .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
                 .check();
 
         imageAdapter = new ImageAdapter();

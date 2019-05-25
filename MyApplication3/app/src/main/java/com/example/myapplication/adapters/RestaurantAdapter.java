@@ -74,7 +74,7 @@ public class RestaurantAdapter extends BaseAdapter<RestaurantModel, RestaurantAd
 
             titleView.setText(model.name);
             addressView.setText(model.address);
-            distanceView.setText("0.1km 이내");
+            distanceView.setText("10km 밖");
 
             numOfReviewsView.setText(String.valueOf(model.numOfReviews));
             localRateView.setText(String.format("%.1f", model.rateLocal));

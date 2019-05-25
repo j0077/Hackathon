@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 public class InfoActivity extends AppCompatActivity {
 
     ReviewAdapter reviewAdapter;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,7 @@ public class InfoActivity extends AppCompatActivity {
         actionBar.setDisplayShowTitleEnabled(false);
 
         Intent intent = getIntent();
-        final String id = intent.getStringExtra("id");
+        id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
         double rateLocal = intent.getDoubleExtra("rateLocal", 4.0);
         double rateTraveler = intent.getDoubleExtra("rateTraveler", 3.5);
@@ -52,7 +54,7 @@ public class InfoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent writeIntent = new Intent(getApplicationContext(), WriteActivity.class);
                 writeIntent.putExtra("id", id);
-                startActivity(writeIntent);
+                startActivityForResult(writeIntent, 200);
             }
         });
 
@@ -82,6 +84,20 @@ public class InfoActivity extends AppCompatActivity {
         reviewList.setAdapter(reviewAdapter);
         reviewList.setLayoutManager(new GridLayoutManager(this, 4));
 
+        fetch();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == 200) {
+            fetch();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    public void fetch() {
+        reviewAdapter.clear();
+
         FirebaseFirestore store = FirebaseFirestore.getInstance();
         store.collection("reviews-new").whereEqualTo("restarunantId", id).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -94,5 +110,4 @@ public class InfoActivity extends AppCompatActivity {
                     }
                 });
     }
-
 }
