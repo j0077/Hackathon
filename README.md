@@ -1,5 +1,4 @@
-# Hackathon
-kookmin hackerton 2019 team 6 </br>
+# kookmin hackathon 2019 team 6 </br>
 -------------------------------------------------------------------
 **동네 맛집** </br> 
 **시연동영상**</br>
